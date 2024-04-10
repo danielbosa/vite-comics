@@ -3,6 +3,7 @@
     <HeaderComponent/>
     <MainComponent/>
     <FooterOneComponent/>
+    <FooterTwoComponent/>
   </div>
 </template>
 
@@ -18,7 +19,7 @@ import FooterTwoComponent from './components/FooterTwoComponent.vue';
       HeaderComponent,
       MainComponent,
       FooterOneComponent,
-      FooterTwoComponent
+      FooterTwoComponent,
     },
     // data(){
     //   return{
