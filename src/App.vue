@@ -1,21 +1,21 @@
 <template>
   <div>
-    <ExampleComponent/>
+    <HeaderComponent/>
   </div>
 </template>
 
 <script>
-import ExampleComponent from './components/ExampleComponent.vue';
+import HeaderComponent from './components/HeaderComponent.vue';
   export default {
     name: 'App',
     components: {
-      ExampleComponent,
+      HeaderComponent
     },
-    data(){
-      return{
-        
-      }
-    },
+    // data(){
+    //   return{
+
+    //   }
+    // },
     methods: {
 
     },
