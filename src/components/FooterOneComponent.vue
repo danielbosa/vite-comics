@@ -2,35 +2,9 @@
     <div>
         <div class="db-container">
             <ul>
-                <li>
-                    <div class="img">
-                        <img src="/public/img/buy-comics-digital-comics.png" alt="">
-                    </div>
-                    <div>digital comics</div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="/public/img/buy-comics-merchandise.png" alt="">
-                    </div>
-                    <div>dc merchandise</div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="/public/img/buy-comics-subscriptions.png" alt="">
-                    </div>
-                    <div>subscription</div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="/public/img/buy-comics-shop-locator.png" alt="">
-                    </div>
-                    <div>comic shop locator</div>
-                </li>
-                <li>
-                    <div class="img">
-                        <img src="/public/img/buy-dc-power-visa.svg" alt="">
-                    </div>
-                    <div>dc power visa</div>
+                <li v-for="(item,index) in shops" :key="index">
+                    <img class="img" :src="item.path" :alt="item.path">
+                    <div>{{item.name}}</div>
                 </li>
             </ul>
         </div>
@@ -40,29 +14,47 @@
 <script>
     export default {
         name: 'FooterOneComponent',
-        // data() {
-        //     return{
-
-        //     }
-        // },
+        data() {
+            return{
+                shops: [
+                    {
+                    name: 'digital comics',
+                    path: '/public/img/buy-comics-digital-comics.png',
+                    },
+                    {
+                    name: 'digital comics',
+                    path: '/public/img/buy-comics-merchandise.png',
+                    },
+                    {
+                    name: 'digital comics',
+                    path: '/public/img/buy-comics-subscriptions.png',
+                    },
+                    {
+                    name: 'digital comics',
+                    path: '/public/img/buy-comics-shop-locator.png',
+                    },
+                    {
+                    name: 'digital comics',
+                    path: '/public/img/buy-dc-power-visa.svg',
+                    }]
+            }
+        },
     }
 </script>
 
 <style lang="scss" scoped>
+@use '/src/assets/styles/partials/variables' as *;
+
     *{
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        background-color: #009FE0;
+        background-color: $accenture;
     }
 
     .db-container{
         max-width: 80%;
         margin: 0 auto;
-    }
-
-    .debug{
-        border: 2px solid red;
     }
 
     ul{
@@ -75,7 +67,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        color: white;
+        color: $light;
         text-transform: uppercase;
         font-size:x-small;
         .img{
