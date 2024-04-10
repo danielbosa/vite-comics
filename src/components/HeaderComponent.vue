@@ -5,16 +5,9 @@
                 <img src="/img/dc-logo.png" alt="">
             </div>
             <ul>
-                <li><a href="#">characters</a></li>
-                <li><a href="#">comics</a></li>
-                <li><a href="#">movies</a></li>
-                <li><a href="#">tv</a></li>
-                <li><a href="#">games</a></li>
-                <li><a href="#">collectibles</a></li>
-                <li><a href="#">videos</a></li>
-                <li><a href="#">fans</a></li>
-                <li><a href="#">news</a></li>
-                <li><a href="#">shop</a></li>
+                <li v-for="(item,index) in links" :key="index">
+                    <a :href="item.link">{{item.name}}</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -23,11 +16,52 @@
 <script>
     export default {
         name: 'HeaderComponent',
-        // data() {
-        //     return{
-
-        //     }
-        // },
+        data() {
+            return{
+                links:[
+                    {
+                        name: 'characters',
+                        link: '#',
+                    },
+                    {
+                        name: 'comics',
+                        link: '#',
+                    },
+                    {
+                        name: 'movies',
+                        link: '#',
+                    },
+                    {
+                        name: 'tv',
+                        link: '#',
+                    },
+                    {
+                        name: 'games',
+                        link: '#',
+                    },
+                    {
+                        name: 'collectibles',
+                        link: '#',
+                    },
+                    {
+                        name: 'videos',
+                        link: '#',
+                    },
+                    {
+                        name: 'fans',
+                        link: '#',
+                    },
+                    {
+                        name: 'news',
+                        link: '#',
+                    },
+                    {
+                        name: 'shop',
+                        link: '#',
+                    },
+                ]
+            }
+        },
     }
 </script>
 
