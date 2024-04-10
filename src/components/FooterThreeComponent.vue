@@ -1,33 +1,31 @@
 <template>
     <main>
         <div class="db-container">
-            <div class="cta">
-                sign-up now!
-            </div>
+            <a class="cta" href="#">sign-up now!</a>
             <div class="footer-icons">
                 <div>follow us</div>
                 <div>
-                    <a href="">
+                    <a href="#">
                         <img src="/img/footer-facebook.png" alt="">
                     </a>
                 </div>
                 <div>
-                    <a href="">
+                    <a href="#">
                         <img src="/img/footer-twitter.png" alt="">
                     </a>
                 </div>
                 <div>
-                    <a href="">
+                    <a href="#">
                         <img src="/img/footer-youtube.png" alt="">
                     </a>
                 </div>
                 <div>
-                    <a href="">
+                    <a href="#">
                         <img src="/img/footer-pinterest.png" alt="">
                     </a>
                 </div>
                 <div>
-                    <a href="">
+                    <a href="#">
                         <img src="/img/footer-periscope.png" alt="">
                     </a>
                 </div>
@@ -65,11 +63,12 @@
     }
 
     .cta{
-        border: 3px solid #0c7cec;
-        padding: 10px;
-        color: white;
         text-transform: uppercase;
         font-weight: bold;
+        border: 3px solid $accenture;
+        padding: 10px;
+        text-decoration: none;
+        color: $light;
     }
 
     .footer-icons{
@@ -78,7 +77,7 @@
         gap: 20px;
         text-transform: uppercase;
         font-weight: bold;
-        color: #0c7cec;
+        color: $accenture;
         a{
             display: flex;
             align-items: center;

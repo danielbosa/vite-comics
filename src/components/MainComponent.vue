@@ -34,8 +34,4 @@
             padding: 30px 0;
         }
     }
-
-    .debug{
-        border: 2px solid red;
-    }
 </style>

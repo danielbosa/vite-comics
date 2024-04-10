@@ -75,7 +75,7 @@
 
     .db-container{
         @include db-container;
-        padding: 50px 0;
+        padding: 30px 0 40px 0;
         background-image: url(/public/img/dc-logo-bg.png);
         background-repeat: no-repeat;
         background-position: 100%;
