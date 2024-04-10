@@ -31,7 +31,7 @@
         div{
             color: white;
             font-weight: 900;
-            padding: 30px;
+            padding: 30px 0;
         }
     }
 
