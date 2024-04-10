@@ -44,17 +44,15 @@
 
 <style lang="scss" scoped>
 @use '/src/assets/styles/partials/variables' as *;
+@use '/src/assets/styles/partials/mixin' as *;
 
     *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+        @include reset;
         background-color: $accenture;
     }
 
     .db-container{
-        max-width: 80%;
-        margin: 0 auto;
+        @include db-container
     }
 
     ul{

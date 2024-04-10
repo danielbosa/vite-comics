@@ -32,20 +32,16 @@
 </script>
 
 <style lang="scss" scoped>
+@use '/src/assets/styles/partials/variables' as *;
+@use '/src/assets/styles/partials/mixin' as *;
+
     *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+        @include reset
     }
 
     .db-container{
-        max-width: 80%;
+        @include db-container;
         height: 100px;
-        margin: 0 auto;
-    }
-
-    .debug{
-        border: 2px solid red;
     }
 
     .d-flex{
@@ -73,15 +69,15 @@
             margin: 0px 10px;
             text-transform: uppercase;
             &:hover a{
-                    color: #0c7cec;
+                    color: $accenture;
             }
             &:hover{
-                border-bottom: 4px solid #0c7cec;
+                border-bottom: 4px solid $accenture;
             }
 
             a{
                 text-decoration: none;
-                color: black;
+                color: $darkest;
                 font-weight: 900;
                 font-size: 10px;
                 line-height: 100px;

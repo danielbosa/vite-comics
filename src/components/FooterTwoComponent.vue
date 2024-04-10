@@ -3,7 +3,7 @@
         <div class="db-container">
             <div class="footer-links">
                 <div>
-                    <h4>dc comics</h4>
+                    <h5>dc comics</h5>
                     <ul>
                         <li><a href="#">Characters</a></li>
                         <li><a href="#">Comics</a></li>
@@ -13,14 +13,14 @@
                         <li><a href="#">Videos</a></li>
                         <li><a href="#">News</a></li>
                     </ul>
-                    <h4>shop</h4>
+                    <h5>shop</h5>
                     <ul>
                         <li><a href="#">Shop DC</a></li>
                         <li><a href="#">Shop DC Collectibles</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>dc</h4>
+                    <h5>dc</h5>
                     <ul>
                         <li><a href="#">Term Of Use</a></li>
                         <li><a href="#">Privacy policy (New)</a></li>
@@ -36,7 +36,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4>sites</h4>
+                    <h5>sites</h5>
                     <ul>
                         <li><a href="#">DC</a></li>
                         <li><a href="#">MAD Magazine</a></li>
@@ -62,10 +62,11 @@
 </script>
 
 <style lang="scss" scoped>
+@use '/src/assets/styles/partials/variables' as *;
+@use '/src/assets/styles/partials/mixin' as *;
+
     *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+        @include reset;
     }
 
     main{
@@ -73,17 +74,12 @@
     }
 
     .db-container{
-        max-width: 80%;
-        margin: 0 auto;
+        @include db-container;
         padding: 50px 0;
         background-image: url(/public/img/dc-logo-bg.png);
         background-repeat: no-repeat;
         background-position: 100%;
-        background-size: 45%;
-    }
-
-    .debug{
-        border: 2px solid red;
+        background-size: 50%;
     }
 
     .footer-links{
@@ -96,17 +92,17 @@
         list-style: none;
     }
 
-    h4{
-        color: white;
+    h5{
+        color: $light;
         text-transform: uppercase;
         font-weight: 900;
     }
 
     li{
         a{
-        font-size: small;
+        font-size: 10px;
         text-decoration: none;
-        color: gray;
+        color: $secondary;
     }
     }
 

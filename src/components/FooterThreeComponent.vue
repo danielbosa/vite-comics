@@ -7,19 +7,29 @@
             <div class="footer-icons">
                 <div>follow us</div>
                 <div>
-                    <img src="/public/img/footer-facebook.png" alt="">
+                    <a href="">
+                        <img src="/img/footer-facebook.png" alt="">
+                    </a>
                 </div>
                 <div>
-                    <img src="/public/img/footer-twitter.png" alt="">
+                    <a href="">
+                        <img src="/img/footer-twitter.png" alt="">
+                    </a>
                 </div>
                 <div>
-                    <img src="/public/img/footer-youtube.png" alt="">
+                    <a href="">
+                        <img src="/img/footer-youtube.png" alt="">
+                    </a>
                 </div>
                 <div>
-                    <img src="/public/img/footer-pinterest.png" alt="">
+                    <a href="">
+                        <img src="/img/footer-pinterest.png" alt="">
+                    </a>
                 </div>
                 <div>
-                    <img src="/public/img/footer-periscope.png" alt="">
+                    <a href="">
+                        <img src="/img/footer-periscope.png" alt="">
+                    </a>
                 </div>
             </div>
         </div>
@@ -38,17 +48,17 @@
 </script>
 
 <style lang="scss" scoped>
+@use '/src/assets/styles/partials/variables' as *;
+@use '/src/assets/styles/partials/mixin' as *;
+
     *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        background-color: #303030;
-        font-size: small;
+        @include reset;
+        background-color: $darkless;
+        font-size: 12px;
     }
 
     .db-container{
-        max-width: 80%;
-        margin: 0 auto;
+        @include db-container;
         padding: 30px 0;
         display: flex;
         justify-content: space-between;
@@ -65,16 +75,16 @@
     .footer-icons{
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
         text-transform: uppercase;
         font-weight: bold;
         color: #0c7cec;
-        i{
-            background-color: #797979;
-            color: transparent;
-        };
+        a{
+            display: flex;
+            align-items: center;
+        }
         img{
-            width: 30px;
+            width: 100%;
         }
     }
 
