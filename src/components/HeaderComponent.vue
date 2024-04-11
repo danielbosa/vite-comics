@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="db-container d-flex">
-            <div class="logo">
+        <div class="db-container db-d-flex">
+            <div class="db-logo">
                 <img src="/img/dc-logo.png" alt="">
             </div>
             <ul>
@@ -69,22 +69,18 @@
 @use '/src/assets/styles/partials/variables' as *;
 @use '/src/assets/styles/partials/mixin' as *;
 
-    *{
-        @include reset
-    }
-
     .db-container{
         @include db-container;
         height: 100px;
     }
 
-    .d-flex{
+    .db-d-flex{
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .logo{
+    .db-logo{
         width: 100px;
         img{
             width: 100%;
@@ -113,7 +109,7 @@
                 text-decoration: none;
                 color: $darkest;
                 font-weight: 900;
-                font-size: 10px;
+                font-size: 12px;
                 line-height: 100px;
             }
         }
