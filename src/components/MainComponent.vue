@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="">
-            <div class="container py-5">
-                <div class="row gx-5 gy-5">
+            <div class="db-container container py-5">
+                <div class="row g-3">
                     <div class="col-4 col-md-3 col-lg-2">
                         <CardComponent/>
                     </div>
