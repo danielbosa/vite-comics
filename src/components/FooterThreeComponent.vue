@@ -1,8 +1,8 @@
 <template>
     <main>
         <div class="db-container">
-            <a class="cta" href="#">sign-up now!</a>
-            <div class="footer-icons">
+            <a class="db-cta" href="#">sign-up now!</a>
+            <div class="db-footer-icons">
                 <div>follow us</div>
                 <div>
                     <a href="#">
@@ -62,7 +62,7 @@
         justify-content: space-between;
     }
 
-    .cta{
+    .db-cta{
         text-transform: uppercase;
         font-weight: bold;
         border: 3px solid $accenture;
@@ -71,7 +71,7 @@
         color: $light;
     }
 
-    .footer-icons{
+    .db-footer-icons{
         display: flex;
         align-items: center;
         gap: 20px;

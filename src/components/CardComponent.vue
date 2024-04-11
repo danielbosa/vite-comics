@@ -1,7 +1,9 @@
 <template>
     <div class="card">
-        <img :src="image" alt="">
-        <div class="db-card-title">{{title}}</div>
+        <div class="db-card-img-container">
+            <img class="db-card-img" :src="image" alt="">
+        </div>
+        <div class="db-card-title text-uppercase ">{{title}}</div>
     </div>
 </template>
 
@@ -17,9 +19,18 @@ export default {
 @use '/src/assets/styles/partials/mixin' as *;
 
 .card{
-    --bs-card-bg: transparent;
     .db-card-title{
         margin-top: 5px;
+        font-size: 12px;
+    }
+    .db-card-img-container{
+        height: 250px;
     }
 }
+
+.db-card-img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
 </style>

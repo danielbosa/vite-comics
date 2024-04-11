@@ -3,7 +3,7 @@
         <div class="db-container">
             <ul>
                 <li v-for="(item,index) in shops" :key="index">
-                    <img class="img" :src="item.path" :alt="item.path">
+                    <img class="db-img" :src="item.path" :alt="item.path">
                     <div>{{item.name}}</div>
                 </li>
             </ul>
@@ -67,8 +67,8 @@
         gap: 10px;
         color: $light;
         text-transform: uppercase;
-        font-size:x-small;
-        .img{
+        font-size: 12px;
+        .db-img{
             width: 40px;
             img{
                 width: 100%;

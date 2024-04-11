@@ -1,7 +1,7 @@
 <template>
     <main>
         <div class="db-container">
-            <div class="footer-links">
+            <div class="db-footer-links">
                 <div>
                     <h5>dc comics</h5>
                     <ul>
@@ -82,7 +82,7 @@
         background-size: 50%;
     }
 
-    .footer-links{
+    .db-footer-links{
         display: flex;
         gap: 30px;
     }
@@ -100,7 +100,7 @@
 
     li{
         a{
-        font-size: 10px;
+        font-size: 12px;
         text-decoration: none;
         color: $secondary;
     }

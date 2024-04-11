@@ -1,13 +1,16 @@
 <template>
     <div>
-        <div class="">
-            <div class="db-container container py-5">
+        <div class="db-container pb-4">
+            <div class="container py-5">
                 <div class="row g-3">
-                    <div class="col-4 col-md-3 col-lg-2" v-for="(item,index) in items" :key="index">
+                    <div class="col-4 col-md-3 col-lg-2 h-100" v-for="(item,index) in items" :key="index">
                         <CardComponent :image="item.thumb" :title="item.series"/>
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+                <button class="db-btn">Load more</button>
+            </div>    
         </div>
     </div>
     
@@ -41,8 +44,15 @@ import CardComponent from './CardComponent.vue';
         @include db-container;
         div{
             color: $light;
-            font-weight: 900;
         }
+    }
+
+    .db-btn{
+        padding: 5px 50px;
+        background-color: $accenture;
+        color: $light;
+        text-transform: uppercase;
+        font-weight: bold;
     }
     
 </style>
