@@ -3,47 +3,13 @@
         <div class="db-container">
             <div class="db-footer-links">
                 <div>
-                    <h5>dc comics</h5>
-                    <ul>
-                        <li><a href="#">Characters</a></li>
-                        <li><a href="#">Comics</a></li>
-                        <li><a href="#">Movies</a></li>
-                        <li><a href="#">TV</a></li>
-                        <li><a href="#">Games</a></li>
-                        <li><a href="#">Videos</a></li>
-                        <li><a href="#">News</a></li>
-                    </ul>
-                    <h5>shop</h5>
-                    <ul>
-                        <li><a href="#">Shop DC</a></li>
-                        <li><a href="#">Shop DC Collectibles</a></li>
-                    </ul>
+                    <FooterMenuComponent v-for="(item,index) in menu.slice(0,2)" :key="index" :menuItem="item"/>
                 </div>
                 <div>
-                    <h5>dc</h5>
-                    <ul>
-                        <li><a href="#">Term Of Use</a></li>
-                        <li><a href="#">Privacy policy (New)</a></li>
-                        <li><a href="#">Ad Choices</a></li>
-                        <li><a href="#">Advertising</a></li>
-                        <li><a href="#">Jobs</a></li>
-                        <li><a href="#">Subscriptions</a></li>
-                        <li><a href="#">Talent Workshops</a></li>
-                        <li><a href="#">CPSC Certificates</a></li>
-                        <li><a href="#">Ratings</a></li>
-                        <li><a href="#">Shop Help</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
+                    <FooterMenuComponent v-for="(item,index) in menu.slice(2,3)" :key="index" :menuItem="item"/>
                 </div>
                 <div>
-                    <h5>sites</h5>
-                    <ul>
-                        <li><a href="#">DC</a></li>
-                        <li><a href="#">MAD Magazine</a></li>
-                        <li><a href="#">DC Kids</a></li>
-                        <li><a href="#">DC Universe</a></li>
-                        <li><a href="#">DC Power Visa</a></li>
-                    </ul>
+                    <FooterMenuComponent v-for="(item,index) in menu.slice(3)" :key="index" :menuItem="item"/>
                 </div>
             </div>
         </div>
@@ -51,13 +17,18 @@
 </template>
 
 <script>
+import {footerMenu} from '../data/store.js';
+import FooterMenuComponent from './FooterMenuComponent.vue';
     export default {
         name: 'FooterTwoComponent',
-        // data() {
-        //     return{
-
-        //     }
-        // },
+        components:{
+            FooterMenuComponent
+        },
+        data() {
+            return{
+                menu: footerMenu
+            }
+        },
     }
 </script>
 
@@ -85,25 +56,6 @@
     .db-footer-links{
         display: flex;
         gap: 30px;
-    }
-
-    ul{
-        margin: 10px 0 15px 0;
-        list-style: none;
-    }
-
-    h5{
-        color: $light;
-        text-transform: uppercase;
-        font-weight: 900;
-    }
-
-    li{
-        a{
-        font-size: 12px;
-        text-decoration: none;
-        color: $secondary;
-    }
     }
 
 </style>

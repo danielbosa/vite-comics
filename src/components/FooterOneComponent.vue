@@ -52,11 +52,5 @@ import ShopComponent from './ShopComponent.vue';
         color: $light;
         text-transform: uppercase;
         font-size: 12px;
-        .db-img{
-            width: 40px;
-            img{
-                width: 100%;
-            }
-        }
     }
 </style>
