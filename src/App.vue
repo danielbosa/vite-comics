@@ -1,6 +1,7 @@
 <template>
   <div>
     <HeaderComponent/>
+    <JumbotronComponent/>
     <MainComponent/>
     <FooterOneComponent/>
     <FooterTwoComponent/>
@@ -10,6 +11,7 @@
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
+import JumbotronComponent from './components/Jumbotron.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterOneComponent from './components/FooterOneComponent.vue';
 import FooterTwoComponent from './components/FooterTwoComponent.vue';
@@ -19,6 +21,7 @@ import FooterThreeComponent from './components/FooterThreeComponent.vue';
     name: 'App',
     components: {
       HeaderComponent,
+      JumbotronComponent,
       MainComponent,
       FooterOneComponent,
       FooterTwoComponent,

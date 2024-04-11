@@ -29,7 +29,7 @@
     .db-container{
         @include db-container;
         div{
-            color: white;
+            color: $light;
             font-weight: 900;
             padding: 30px 0;
         }

@@ -19,23 +19,23 @@
                 shops: [
                     {
                     name: 'digital comics',
-                    path: '/public/img/buy-comics-digital-comics.png',
+                    path: '/img/buy-comics-digital-comics.png',
                     },
                     {
                     name: 'digital comics',
-                    path: '/public/img/buy-comics-merchandise.png',
+                    path: '/img/buy-comics-merchandise.png',
                     },
                     {
                     name: 'digital comics',
-                    path: '/public/img/buy-comics-subscriptions.png',
+                    path: '/img/buy-comics-subscriptions.png',
                     },
                     {
                     name: 'digital comics',
-                    path: '/public/img/buy-comics-shop-locator.png',
+                    path: '/img/buy-comics-shop-locator.png',
                     },
                     {
                     name: 'digital comics',
-                    path: '/public/img/buy-dc-power-visa.svg',
+                    path: '/img/buy-dc-power-visa.svg',
                     }]
             }
         },
