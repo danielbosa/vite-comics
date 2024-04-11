@@ -1,10 +1,7 @@
 <template>
     <div class="card">
-        <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="">
-        <div class="db-card-title">TITOLO</div>
-
         <img :src="image" alt="">
-        <div class="db-card-title">TITOLO</div>
+        <div class="db-card-title">{{title}}</div>
     </div>
 </template>
 

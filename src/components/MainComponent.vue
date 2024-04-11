@@ -3,38 +3,8 @@
         <div class="">
             <div class="db-container container py-5">
                 <div class="row g-3">
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-2">
-                        <CardComponent/>
+                    <div class="col-4 col-md-3 col-lg-2" v-for="(item,index) in items" :key="index">
+                        <CardComponent :image="item.thumb" :title="item.series"/>
                     </div>
                 </div>
             </div>
@@ -44,17 +14,18 @@
 </template>
 
 <script>
+import {comics} from '../data/store.js';
 import CardComponent from './CardComponent.vue';
     export default {
         name: 'MainComponent',
         components: {
       CardComponent
     },
-        // data() {
-        //     return{
-
-        //     }
-        // },
+        data() {
+            return{
+                items: comics
+            }
+        },
     }
 </script>
 
@@ -63,7 +34,6 @@ import CardComponent from './CardComponent.vue';
 @use '/src/assets/styles/partials/mixin' as *;
 
     *{
-        @include reset;
         background-color: $darkest;
     }
     
@@ -74,4 +44,5 @@ import CardComponent from './CardComponent.vue';
             font-weight: 900;
         }
     }
+    
 </style>
