@@ -72,5 +72,71 @@ const comics= [
         "type": "graphic novel",
     },
   ];
-  
-  export {comics};
+
+const headerOptions = [
+        {
+            name: 'characters',
+            link: '#',
+        },
+        {
+            name: 'comics',
+            link: '#',
+        },
+        {
+            name: 'movies',
+            link: '#',
+        },
+        {
+            name: 'tv',
+            link: '#',
+        },
+        {
+            name: 'games',
+            link: '#',
+        },
+        {
+            name: 'collectibles',
+            link: '#',
+        },
+        {
+            name: 'videos',
+            link: '#',
+        },
+        {
+            name: 'fans',
+            link: '#',
+        },
+        {
+            name: 'news',
+            link: '#',
+        },
+        {
+            name: 'shop',
+            link: '#',
+        },
+]
+
+const shops = [
+        {
+        name: 'digital comics',
+        path: '/img/buy-comics-digital-comics.png',
+        },
+        {
+        name: 'DC merchandise',
+        path: '/img/buy-comics-merchandise.png',
+        },
+        {
+        name: 'subscription',
+        path: '/img/buy-comics-subscriptions.png',
+        },
+        {
+        name: 'comic shop locator',
+        path: '/img/buy-comics-shop-locator.png',
+        },
+        {
+        name: 'DC power visa',
+        path: '/img/buy-dc-power-visa.svg',
+        }
+]
+
+export {comics, headerOptions, shops};

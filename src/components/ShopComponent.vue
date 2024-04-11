@@ -1,28 +1,12 @@
 <template>
-    <div>
-        <div class="db-container">
-            <ul>
-                <li v-for="(item,index) in items" :key="index">
-                    <ShopComponent :image="item.path" :shop="item.name"/>
-                </li>
-            </ul>
-        </div>
-    </div>
+        <img class="db-img" :src="image" :alt="shop">
+        <div>{{shop}}</div>
 </template>
 
 <script>
-import {shops} from '../data/store.js';
-import ShopComponent from './ShopComponent.vue';
-    export default {
-        name: 'FooterOneComponent',
-        components:{
-            ShopComponent
-        },
-        data(){
-            return{
-                items: shops
-        }
-    },
+export default {
+    name: 'ShopComponent',
+    props: ['shop', 'image']
 }
 </script>
 

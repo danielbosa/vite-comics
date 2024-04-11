@@ -5,7 +5,7 @@
                 <img src="/img/dc-logo.png" alt="">
             </div>
             <ul>
-                <li v-for="(item,index) in links" :key="index">
+                <li v-for="(item,index) in items" :key="index">
                     <a :href="item.link">{{item.name}}</a>
                 </li>
             </ul>
@@ -14,52 +14,12 @@
 </template>
 
 <script>
+import {headerOptions} from '../data/store.js';
     export default {
         name: 'HeaderComponent',
         data() {
             return{
-                links:[
-                    {
-                        name: 'characters',
-                        link: '#',
-                    },
-                    {
-                        name: 'comics',
-                        link: '#',
-                    },
-                    {
-                        name: 'movies',
-                        link: '#',
-                    },
-                    {
-                        name: 'tv',
-                        link: '#',
-                    },
-                    {
-                        name: 'games',
-                        link: '#',
-                    },
-                    {
-                        name: 'collectibles',
-                        link: '#',
-                    },
-                    {
-                        name: 'videos',
-                        link: '#',
-                    },
-                    {
-                        name: 'fans',
-                        link: '#',
-                    },
-                    {
-                        name: 'news',
-                        link: '#',
-                    },
-                    {
-                        name: 'shop',
-                        link: '#',
-                    },
-                ]
+                items: headerOptions,
             }
         },
     }
